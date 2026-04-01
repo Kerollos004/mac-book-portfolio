@@ -9,7 +9,7 @@ export default function Img() {
       dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
       dragElastic={.4}
       onDoubleClick={() => setNav("about")}
-      whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}   // للديسكتوب
+      whileHover={{ backgroundColor: "rgba(255,255,255,0.15)" }}   // للديسكتوب
       whileTap={{  backgroundColor: "rgba(255,255,255,0.15)" }} // للموبايل (مهم جداً)
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
       className=" absolute top-28  md:top-56 md:left-1/5 left-8 p-3 flex text-white flex-col items-center justify-center gap-2 "
