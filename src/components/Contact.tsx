@@ -33,7 +33,7 @@ const contactsMap = contacts.map((contact, i) => {
     return (
         <div className="p-4 flex items-center justify-center flex-col gap-2 text-2xl bg-blue-50 rounded-2xl" key={i}>
             <contact.icon />
-            <a href={contact.href}> {contact.tool   } </a>
+            <a href={contact.href}> {contact.tool} </a>
         </div>
     )
 })
