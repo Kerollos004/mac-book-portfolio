@@ -2,7 +2,6 @@
 *{
   box-sizing: border-box;
   transition: all .4s ease;
-  -webkit-tap-highlight-color: transparent;
   outline: none;
 }
 .app {
