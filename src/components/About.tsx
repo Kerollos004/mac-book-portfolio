@@ -54,7 +54,7 @@ return (
             <HeadFolder />
             <div className="h-[calc(100%-50px)] w-full  flex justify-center  p-3 absolute top-10">
                 <img src={cv} alt="img" className=' w-full md:w-96 h-full' />
-                <a href="./my-cv.pdf" className=' absolute top-4 right-5 text-2xl' download> <ArrowDownCircle/> </a>
+                <a href="/my-cv.pdf" className=' absolute top-4 right-5 text-2xl' download> <ArrowDownCircle/> </a>
             </div>
         </div>
     </main>
