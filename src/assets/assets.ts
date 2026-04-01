@@ -266,7 +266,7 @@ export const favourites: Favourite[] = [
     },
     {
         name: "favourite artist",
-        img:"public/imgs/singer.gif"
+        img:"/imgs/singer.gif"
     }
 ]
 
