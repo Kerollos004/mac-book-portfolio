@@ -178,7 +178,7 @@ export const projects: projects[] = [
 },
 {
     name: "Mahmoud Khalil Museum",
-    img: "/imgs/meus.png",
+    img: "/imgs/mues.png",
     desc: "A fully responsive graduation project website designed for an archaeology faculty student.",
     demo: "https://mahmoud-khalil-museum.vercel.app/",
     repo: "https://github.com/Kerollos004/mahmoud-khalil-museum",
