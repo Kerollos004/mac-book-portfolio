@@ -16,7 +16,7 @@ export default function Projects() {
     
     const projectMap = projects.map((project, i) => {
         return (
-            <div onClick={() => {
+            <div onDoubleClick={() => {
                 setProject(true)
                 handleSelection(i)
             }} className=" p-3 rounded-2xl hover:bg-blue-50  flex items-center gap-2" key={i}>

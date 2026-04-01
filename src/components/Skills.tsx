@@ -41,15 +41,15 @@ export default function Skills() {
             >
             <HeadFolder />
             <div className=' h-[calc(100%-50px)] w-full p-3 absolute top-10 '>
-                <div onClick={()=>{setFile("front")}} className="flex mb-2 items-center p-3 rounded-2xl hover:bg-blue-50 gap-2">
+                <div onDoubleClick={()=>{setFile("front")}} className="flex mb-2 items-center p-3 rounded-2xl hover:bg-blue-50 gap-2">
                     <img  className="w-6 h-6" src={folderImg} alt="img" loading="lazy" />
                     <h3 className="text-xl capitalize">frontend</h3>
                 </div>
-                <div onClick={()=>{setFile("back")}} className="flex mb-2 items-center p-3 rounded-2xl hover:bg-blue-50 gap-2">
+                <div onDoubleClick={()=>{setFile("back")}} className="flex mb-2 items-center p-3 rounded-2xl hover:bg-blue-50 gap-2">
                     <img className="w-6 h-6" src={folderImg} alt="img" loading="lazy" />
                     <h3 className="text-xl capitalize">backend</h3>
                 </div>
-                <div onClick={()=>{setFile("tools")}} className="flex mb-2 items-center p-3 rounded-2xl hover:bg-blue-50 gap-2">
+                <div onDoubleClick={()=>{setFile("tools")}} className="flex mb-2 items-center p-3 rounded-2xl hover:bg-blue-50 gap-2">
                     <img className="w-6 h-6" src={folderImg} alt="img" loading="lazy" />
                     <h3 className="text-xl capitalize">tools</h3>
                 </div>

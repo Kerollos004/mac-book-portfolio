@@ -16,7 +16,7 @@ export default function Games() {
                 drag
                 dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 dragElastic={.4}
-                onClick={() => { setNav("games") }}
+                onDoubleClick={() => { setNav("games") }}
                 className=" flex flex-col justify-center items-center  p-3 hover:bg-white/10 absolute top-3/5 left-1/5  "
             >
                     <img src={folderImg} alt="img" loading="lazy" className="mb-2" />
@@ -34,7 +34,7 @@ export default function Games() {
                         <h3>tic tac toe</h3>
                     </div> */}
     
-                    <div onClick={()=>{setFile("rock paper")}} className="flex items-center w-full hover:bg-blue-50 gap-2">
+                    <div onDoubleClick={()=>{setFile("rock paper")}} className="flex items-center w-full hover:bg-blue-50 gap-2">
                         <img src={folderImg} alt="img" loading="lazy" />
                         <h3>rock paper scissors </h3>
                     </div>

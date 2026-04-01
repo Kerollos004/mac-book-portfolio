@@ -21,7 +21,7 @@ export default function Media() {
                 drag
                 dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 dragElastic={.4}
-                onClick={() => { setNav("media") }}
+                onDoubleClick={() => { setNav("media") }}
                 className={`flex flex-col justify-center items-center  text-white p-3 hover:bg-white/10 absolute top-1/5 right-1/5  `}
             >
                 <img className=" mb-2" src={folderImg} alt="img" loading="lazy" />

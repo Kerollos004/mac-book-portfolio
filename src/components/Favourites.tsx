@@ -21,7 +21,7 @@ export default function Favourites() {
                 drag
                 dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 dragElastic={.4}
-                onClick={() => { setNav("favourite") }}
+                onDoubleClick={() => { setNav("favourite") }}
                 className=" flex flex-col justify-center items-center  p-3 hover:bg-white/10 absolute top-2/5 right-1/5  "
             >
                 <img src={folderImg} alt="img" loading="lazy" className="mb-2" />

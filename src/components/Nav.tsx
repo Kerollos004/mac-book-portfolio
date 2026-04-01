@@ -40,19 +40,19 @@ export default function Nav() {
             <motion.div variants={itemVariants}
                 className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300"
             >
-                <Person onClick={()=>{setNav("about")}}/>
+                <Person onDoubleClick={()=>{setNav("about")}}/>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300" >
-                <Code onClick={()=>{setNav("skills")}}/>
+                <Code onDoubleClick={()=>{setNav("skills")}}/>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300" >
-                <Cast onClick={()=>{setNav("projects")}}/>
+                <Cast onDoubleClick={()=>{setNav("projects")}}/>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300" >
-                <Chat onClick={()=>{setNav("contact")}}/>
+                <Chat onDoubleClick={()=>{setNav("contact")}}/>
             </motion.div>
         </motion.div>
     )

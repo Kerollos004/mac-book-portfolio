@@ -37,7 +37,7 @@ return (
         <div className=" mb-3 ">
             <h3 className='  mb-2.5 text-3xl capitalize'>about me</h3>
             {aboutMapping}  
-                <div onClick={()=>{setFile("cv")}} className="flex mt-2 items-center gap-2 p-3 rounded-2xl hover:bg-blue-50">
+                <div onDoubleClick={()=>{setFile("cv")}} className="flex mt-2 items-center gap-2 p-3 rounded-2xl hover:bg-blue-50">
                     <img src={folderImg} alt="img" className='w-6 h-6' />
                     <h3 className='text-2xl' >view cv</h3>
                 </div>    
@@ -54,7 +54,7 @@ return (
             <HeadFolder />
             <div className="h-[calc(100%-50px)] w-full  flex justify-center  p-3 absolute top-10">
                 <img src={cv} alt="img" className=' w-full md:w-96 h-full' />
-                <a href="/my-cv.pdf" className=' absolute top-4 right-5 text-2xl' download> <ArrowDownCircle/> </a>
+                <a href="---/my-cv.pdf" className=' absolute top-4 right-5 text-2xl' download> <ArrowDownCircle/> </a>
             </div>
         </div>
     </main>
