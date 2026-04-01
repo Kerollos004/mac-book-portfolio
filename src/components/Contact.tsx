@@ -4,7 +4,6 @@ import { useMinmizeContext, useNavContext } from "../contexts"
 import HeadFolder from "./HeadFolder"
 import { Send } from "react-bootstrap-icons"
 import emailjs from "@emailjs/browser"
-import { motion } from "motion/react"
 export default function Contact() {
     const [user, setUser] = useState<User>({ name: "", email: "", message: "" })
     const { nav } = useNavContext()
@@ -38,10 +37,8 @@ const contactsMap = contacts.map((contact, i) => {
     )
 })
     return (
-        <motion.main
-        drag
-        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-        dragElastic={.4}
+        <main
+
             className={`${mainClass} ${mini?"w-full h-full md:w-full md:h-full":""} ${nav === "contact" ? "block" : "hidden"}`}
         >
             <HeadFolder />
@@ -71,6 +68,6 @@ const contactsMap = contacts.map((contact, i) => {
                     </button>
                 </form>
             </div>
-        </motion.main>
+        </main>
     )
 }

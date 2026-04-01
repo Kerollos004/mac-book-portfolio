@@ -2,7 +2,6 @@ import { mainClass , frontSkills , backSkills , tools } from "../assets/assets";
 import folderImg from "../../public/imgs/icons8-mac-folder-48.png"
 import HeadFolder from '../components/HeadFolder'
 import { useNavContext , useFilesContext, useMinmizeContext } from "../contexts";
-import { motion } from 'motion/react'
 
 export default function Skills() {
     const { nav } = useNavContext()
@@ -36,10 +35,8 @@ export default function Skills() {
         )
     })
     return (
-        <motion.main
-            drag
-            dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-            dragElastic={.4}
+        <main
+
             className={`${mainClass} ${mini?"w-full h-full md:w-full md:h-full":""} ${nav === "skills" ? "block" : "hidden"}`}
             >
             <HeadFolder />
@@ -72,7 +69,7 @@ export default function Skills() {
                     }
                 </div>
             </div>
-        </motion.main>
+        </main>
         
     )
 }

@@ -23,10 +23,8 @@ export default function Games() {
                     <h3 className="text-center text-white"> games & entertainment </h3>
             </motion.div>
             {/* main folder */}
-            <motion.main
-                drag
-                dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-                dragElastic={.4}
+            <main
+
                 className={`${mainClass} ${mini?"w-full h-full md:w-full md:h-full":""} ${nav == "games" ? "block" : "hidden"} `}
             >
                 <HeadFolder />
@@ -52,7 +50,7 @@ export default function Games() {
                         }
                     </div>
                 </div>
-            </motion.main>
+            </main>
         </>    
     )
 }

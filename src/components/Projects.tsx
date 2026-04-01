@@ -3,7 +3,6 @@ import HeadFolder from '../components/HeadFolder'
 import { projects, mainClass } from "../assets/assets";
 import folderImg from "../../public/imgs/icons8-mac-folder-48.png"
 import { useState } from "react";
-import { motion } from "motion/react";
 export default function Projects() {
     const { project, setProject } = useProjectsContext()
 
@@ -27,10 +26,7 @@ export default function Projects() {
         )
     })
     return (
-        <motion.main
-            drag
-            dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-            dragElastic={.4}
+        <main
             className={`${mainClass} ${mini?"w-full h-full md:w-full md:h-full":""} ${nav == "projects" ? "block" : "hidden"}`}
         >
             <HeadFolder />
@@ -61,6 +57,6 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-        </motion.main>
+        </main>
     )
 }

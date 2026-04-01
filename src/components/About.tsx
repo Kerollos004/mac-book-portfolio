@@ -4,7 +4,6 @@ import { about, services, mainClass } from '../assets/assets'
 import folderImg from "../../public/imgs/icons8-mac-folder-48.png"
 import cv from "../../public/imgs/cv.jpeg"
 import { ArrowDownCircle } from 'react-bootstrap-icons'
-import { motion } from 'motion/react'
 export default function About() {
     const { nav } = useNavContext()
     const { file, setFile } = useFilesContext()
@@ -29,10 +28,8 @@ export default function About() {
         )
     })
 return (
-    <motion.main
-        drag
-        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-        dragElastic={.4}
+    <main
+
         className={` ${mainClass} ${mini?"w-full h-full md:w-full md:h-full":""}  ${nav == "about" ? "block" : "hidden"}`}
     >
     <HeadFolder />
@@ -60,7 +57,7 @@ return (
                 <a href="../../public/my-cv.pdf" className=' absolute top-4 right-5 text-2xl' download> <ArrowDownCircle/> </a>
             </div>
         </div>
-    </motion.main>
+    </main>
 
 )
 }

@@ -28,17 +28,14 @@ export default function Media() {
                 <h3> social links </h3>
             </motion.div>
             {/* main folder */}
-            <motion.main
-                drag
-                dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-                dragElastic={.4}
+            <main
                 className={`${mainClass} ${mini?"w-full h-full md:w-full md:h-full":""} ${nav == "media" ? "block" : "hidden"} `}
             >
                 <HeadFolder />
                 <div className=" h-[calc(100%-50px)] w-full p-3 absolute top-10  ">
                     {mediaMap}
                 </div>
-            </motion.main>
+            </main>
         </>
     )
 }
