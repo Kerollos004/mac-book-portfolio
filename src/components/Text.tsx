@@ -27,7 +27,13 @@ const letterVariant: Variants = {
 export default function Text() {
     const helloTextMap = helloText.h1.map(( text ) => {
         return (
-            <motion.h1 variants={letterVariant} className="text-6xl italic  font-font-bold hover:-translate-y-1 " key={text.id}>{text.text}</motion.h1>
+            <motion.h1
+                whileHover={{ transform: "translateY(-10px)" }}
+                whileTap={{transform:"translateY(-10px)"}}
+                variants={letterVariant} className="text-6xl italic  font-font-bold  "
+                key={text.id}>
+                {text.text}
+            </motion.h1>
         )
     })
     return (

@@ -17,7 +17,9 @@ export default function Games() {
                 dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 dragElastic={.4}
                 onDoubleClick={() => { setNav("games") }}
-                className=" flex flex-col justify-center items-center  p-3 hover:bg-white/10 absolute top-3/5 left-1/5  "
+                whileHover={{ backgroundColor: "rgba(225,255,255,.1)" }}
+                whileTap={{ backgroundColor: "rgba(225,255,255,.1)" }}
+                className=" flex flex-col justify-center items-center  p-3  absolute top-3/5 left-1/5  "
             >
                     <img src={folderImg} alt="img" loading="lazy" className="mb-2" />
                     <h3 className="text-center text-white"> games & entertainment </h3>
@@ -34,10 +36,15 @@ export default function Games() {
                         <h3>tic tac toe</h3>
                     </div> */}
     
-                    <div onDoubleClick={()=>{setFile("rock paper")}} className="flex items-center w-full hover:bg-blue-50 gap-2">
+                    <motion.div
+                        whileHover={{ backgroundColor: "#eff6ff" }}
+                        whileTap={{backgroundColor:"#eff6ff"}}
+                        onDoubleClick={() => { setFile("rock paper") }}
+                        className="flex items-center p-3 rounded-2xl w-full hover:bg-blue-50 gap-2"
+                    >
                         <img src={folderImg} alt="img" loading="lazy" />
                         <h3>rock paper scissors </h3>
-                    </div>
+                    </motion.div>
 
                 </div>
 

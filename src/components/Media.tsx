@@ -8,10 +8,13 @@ export default function Media() {
     const {mini} = useMinmizeContext()
     const mediaMap = medias.map((media) => {
         return (
-            <a href={media.ref} key={media.id} className="flex items-center w-full hover:bg-blue-50 gap-2">
+            <motion.a
+                whileHover={{ backgroundColor: "#eff6ff" }}
+                whileTap={{ backgroundColor: "#eff6ff" }}
+                href={media.ref} key={media.id} className="flex items-center w-full p-3 rounded-2xl gap-2">
                 <img src={folderImg} alt="img" loading="lazy" />
                 <h3>{media.text} </h3>
-            </a>
+            </motion.a>
         )
     })
     return (
@@ -22,7 +25,9 @@ export default function Media() {
                 dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 dragElastic={.4}
                 onDoubleClick={() => { setNav("media") }}
-                className={`flex flex-col justify-center items-center  text-white p-3 hover:bg-white/10 absolute top-1/5 right-1/5  `}
+                whileHover={{ backgroundColor: "rgba(225,225,225,0.1)" }}
+                whileTap={{ backgroundColor: "rgba(225,225,225,0.1)" }}
+                className={`flex flex-col justify-center items-center  text-white p-3  absolute top-1/5 right-1/5  `}
             >
                 <img className=" mb-2" src={folderImg} alt="img" loading="lazy" />
                 <h3> social links </h3>

@@ -3,6 +3,7 @@
   box-sizing: border-box;
   transition: all .4s ease;
   outline: none;
+  
 }
 .app {
   width: 100%;

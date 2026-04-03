@@ -8,10 +8,15 @@ export default function Favourites() {
     const{mini}=useMinmizeContext()
     const favouritesMap = favourites.map((fav, i) => {
         return (
-            <div className=" flex p-3 flex-col justify-center items-center gap-2 hover:bg-blue-50 " key={i}>
+            <motion.div
+                whileTap={{backgroundColor:"#eff6ff"}}
+                whileHover={{backgroundColor:"#eff6ff"}}
+                className=" flex p-3 flex-col justify-center items-center gap-2  "
+                key={i}
+            >
                 <img className="w-11/12 h-96" src={fav.img} alt="img" />
                 <h3> {fav.name} </h3>
-            </div>
+            </motion.div>
         )
     })
     return (
@@ -22,7 +27,9 @@ export default function Favourites() {
                 dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 dragElastic={.4}
                 onDoubleClick={() => { setNav("favourite") }}
-                className=" flex flex-col justify-center items-center  p-3 hover:bg-white/10 absolute top-2/5 right-1/5  "
+                whileHover={{   backgroundColor: "rgba(255,255,255,.1)" }}   
+                whileTap={{     backgroundColor: "rgba(255,255,255,.1)" }}
+                className=" flex flex-col justify-center items-center  p-3  absolute top-2/5 right-1/5  "
             >
                 <img src={folderImg} alt="img" loading="lazy" className="mb-2" />
                 <h3 className="text-center text-white"> my favourites </h3>

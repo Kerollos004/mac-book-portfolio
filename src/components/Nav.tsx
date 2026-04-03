@@ -38,20 +38,31 @@ export default function Nav() {
             className="absolute left-1/2 -translate-x-1/2 bottom-10 text-2xl cursor-pointer p-5 rounded-4xl bg-white/20 flex gap-3 text-white"
         >
             <motion.div variants={itemVariants}
-                className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300"
+                whileHover={{ transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}   
+                whileTap={{   transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}
+                className="p-3 border border-white rounded-2xl "
             >
                 <Person onDoubleClick={()=>{setNav("about")}}/>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300" >
+            <motion.div variants={itemVariants}                 
+                whileHover={{ transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}   
+                whileTap={{   transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}
+                className="p-3 border border-white rounded-2xl  " >
                 <Code onDoubleClick={()=>{setNav("skills")}}/>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300" >
+            <motion.div variants={itemVariants}                 
+                whileHover={{ transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}   
+                whileTap={{   transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}
+                className="p-3 border border-white rounded-2xl  " >
                 <Cast onDoubleClick={()=>{setNav("projects")}}/>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="p-3 border border-white rounded-2xl hover:-translate-y-2 hover:bg-blue-300" >
+            <motion.div variants={itemVariants}                 
+                whileHover={{ transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}   
+                whileTap={{   transform: "translateY(-10px)" ,  backgroundColor: "oklch(80.9% 0.105 251.813)" }}
+                className="p-3 border border-white rounded-2xl  " >
                 <Chat onDoubleClick={()=>{setNav("contact")}}/>
             </motion.div>
         </motion.div>

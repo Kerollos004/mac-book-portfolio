@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { images } from "../assets/assets"
+import { motion } from "motion/react"
 export default function RockPaper() {
     const [personResult, setPersonResult] = useState<number>(0)
     const [comResult, setComResult] = useState<number>(0)
@@ -60,7 +61,13 @@ export default function RockPaper() {
             </div>
             <div className={`gap-2 mt-4 flex items-center justify-center`}>
                 <h3 className="text-2xl text-blue-500"> {result} </h3>
-                <button onClick={handleReset} className={`  ${personChoice !== null && compChoice !== null?"block":"hidden"} py-1 px-4 rounded-2xl border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white`}>reset</button>
+                <motion.button
+                    whileHover={{backgroundColor:"oklch(62.3% 0.214 259.815)" , color:"white"}}
+                    whileTap={{ backgroundColor: "oklch(62.3% 0.214 259.815)", color: "white" }}
+                    onClick={handleReset}
+                    className={`  ${personChoice !== null && compChoice !== null ? "block" : "hidden"} py-1 px-4 rounded-2xl border border-blue-500  text-blue-500`}>
+                    reset
+                </motion.button>
             </div>
         </div>
     )

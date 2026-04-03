@@ -4,6 +4,7 @@ import { about, services, mainClass } from '../assets/assets'
 import folderImg from "../../public/imgs/icons8-mac-folder-48.png"
 import cv from "../../public/imgs/cv.jpeg"
 import { ArrowDownCircle } from 'react-bootstrap-icons'
+import { motion } from 'motion/react'
 export default function About() {
     const { nav } = useNavContext()
     const { file, setFile } = useFilesContext()
@@ -18,13 +19,18 @@ export default function About() {
     })
     const servicesMapping = services.map((service) => {
         return (
-            <div className="p-3 rounded-2xl w-full hover:bg-black/10 " key={service.id}>
+            <motion.div
+                whileHover={{ backgroundColor: "rgba(0,0,0,0.1)" }}
+                whileTap={{ backgroundColor: "rgba(0,0,0,0.1)" }}
+                className="p-3 rounded-2xl w-full  "
+                key={service.id}
+            >
                 <div className="flex items-center mb-2 gap-2">
                     <img className='w-14 h-14 rounded-full' src={service.icon} alt="img" loading='lazy' />
                     <h3 className='text-2xl'> {service.name }</h3>
                 </div>
                 <p>{ service.desc}</p>
-            </div>
+            </motion.div>
         )
     })
 return (
@@ -37,10 +43,14 @@ return (
         <div className=" mb-3 ">
             <h3 className='  mb-2.5 text-3xl capitalize'>about me</h3>
             {aboutMapping}  
-                <div onDoubleClick={()=>{setFile("cv")}} className="flex mt-2 items-center gap-2 p-3 rounded-2xl hover:bg-blue-50">
+                <motion.div
+                    onDoubleClick={() => { setFile("cv") }}
+                    whileHover={{ backgroundColor: "#eff6ff" }}
+                    whileTap={{ backgroundColor: "#eff6ff" }}
+                    className="flex mt-2 items-center gap-2 p-3 rounded-2xl">
                     <img src={folderImg} alt="img" className='w-6 h-6' />
                     <h3 className='text-2xl' >view cv</h3>
-                </div>    
+                </motion.div>    
         </div>
         <div >
             <h3 className='  mb-2.5 text-3xl capitalize'>

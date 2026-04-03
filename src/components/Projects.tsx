@@ -3,6 +3,7 @@ import HeadFolder from '../components/HeadFolder'
 import { projects, mainClass } from "../assets/assets";
 import folderImg from "../../public/imgs/icons8-mac-folder-48.png"
 import { useState } from "react";
+import { motion } from "motion/react";
 export default function Projects() {
     const { project, setProject } = useProjectsContext()
 
@@ -16,13 +17,16 @@ export default function Projects() {
     
     const projectMap = projects.map((project, i) => {
         return (
-            <div onDoubleClick={() => {
+            <motion.div
+                whileHover={{ backgroundColor: "#eff6ff" }}
+                whileTap={{ backgroundColor: "#eff6ff" }}
+                onDoubleClick={() => {
                 setProject(true)
                 handleSelection(i)
-            }} className=" p-3 rounded-2xl hover:bg-blue-50  flex items-center gap-2" key={i}>
+            }} className=" p-3 rounded-2xl   flex items-center gap-2" key={i}>
                 <img  className="w-7 h-7" src={folderImg} alt="img" loading="lazy" />
                 <h3>{project.name }</h3>
-            </div>
+            </motion.div>
         )
     })
     return (
